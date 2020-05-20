@@ -1,3 +1,3 @@
 # thworks
-rozwiazanie zadania rekrutacyjnego
+#odpalenie testow
 npm run test
