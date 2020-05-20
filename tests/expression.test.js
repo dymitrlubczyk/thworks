@@ -19,17 +19,6 @@ test('Add 1 to 2', () => {
     expect(result.equals(expected)).toBe(true);
 });
 
-test('Add three expressions', () => {
-
-    const p=new Expression('(1x^0)');
-    const p2=new Expression('(2x^0)');
-    const p3=new Expression('(3x^0)');
-    const expected=new Expression('(6x^0)');
-    const result=p.add(p2).add(p3);
-
-    expect(result.equals(expected)).toBe(true);
-});
-
 test('Add x to x', () => {
 
     const p=new Expression('(1x^1)');
@@ -48,6 +37,40 @@ test('Add 2x to x', () => {
 
     expect(result.equals(expected)).toBe(true);
 });
+
+test('Add three expressions 1', () => {
+
+    const p=new Expression('(1x^0)');
+    const p2=new Expression('(2x^0)');
+    const p3=new Expression('(3x^0)');
+    const expected=new Expression('(6x^0)');
+    const result=p.add(p2).add(p3);
+
+    expect(result.equals(expected)).toBe(true);
+});
+
+test('Add three expressions 2', () => {
+
+    const p=new Expression('(1x^-0.5)');
+    const p2=new Expression('(2x^-0.5)');
+    const p3=new Expression('(3x^-0.5)');
+    const expected=new Expression('(6x^-0.5)');
+    const result=p.add(p2).add(p3);
+
+    expect(result.equals(expected)).toBe(true);
+});
+
+test('Add three expressions 3', () => {
+
+    const p=new Expression('(2x^0.5)');
+    const p2=new Expression('(2x^0)');
+    const p3=new Expression('(2x^-0.5)');
+    const expected=new Expression('(2x^0.5)+(2x^0)+(2x^-0.5)');
+    const result=p.add(p2).add(p3);
+
+    expect(result.equals(expected)).toBe(true);
+});
+
 
 test('Add x-1 to 1-(x^-1)', () => {
 
@@ -90,7 +113,7 @@ test('Add three complex expressions', () => {
     expect(result.equals(expected)).toBe(true);
 });
 
-test('Add to 0 expressions', () => {
+test('Add to empty expression', () => {
 
     const p=new Expression('(1.5x^90)-(1x^2.5)+(1x^1)');
     const empty=new Expression();
@@ -100,7 +123,7 @@ test('Add to 0 expressions', () => {
     expect(result.equals(expected)).toBe(true);
 });
 
-test('Add multiple expressions that sums to 0', () => {
+test('Add multiple expressions that sum to 0', () => {
 
     const p1=new Expression('(1.5x^90)-(1x^2.5)+(1x^1)');
     const p2=new Expression('(-1.5x^90)+(1x^2.5)-(1x^1)');
