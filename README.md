@@ -1,3 +1,3 @@
 # thworks
-#odpalenie testow
+Aby odpalic testy\
 npm run test
