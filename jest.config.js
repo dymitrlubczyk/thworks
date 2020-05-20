@@ -1,6 +1,6 @@
 module.exports = {
     displayName: {
-      name: 'POLYNOMIAL TESTS',
+      name: 'EXPRESSIONS TESTS',
       color: 'blue',
     },
 
