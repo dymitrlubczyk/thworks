@@ -1,3 +1,3 @@
 # thworks
-Aby odpalic testy\
+To run tests\
 npm run test
