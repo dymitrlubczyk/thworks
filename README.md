@@ -1,3 +1,14 @@
 # thworks
 rozwiazanie zadania rekrutacyjnego
-zeby odpalic testy npm test
+
+
+
+
+
+
+
+
+
+
+npm run test
+
